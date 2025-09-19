@@ -6,12 +6,26 @@
   <title>Parisa Nouri | Robotics & AI</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
+    body { margin: 0; font-family: Arial, sans-serif; }
+    nav {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      background: #003366;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 50px;
+      z-index: 10;
     }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover { color: #00aced; }
 
-    /* Hero Section */
     header {
       position: relative;
       height: 100vh;
@@ -22,35 +36,18 @@
       text-align: center;
       overflow: hidden;
     }
-
-    /* GIF background only for header */
     header img.bg-video {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       object-fit: cover;
+      filter: brightness(0.5);
       z-index: -1;
-      filter: brightness(0.5); /* darken for readability */
     }
-
-    .overlay {
-      z-index: 1;
-      max-width: 800px;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      margin: 15px 0;
-    }
-
-    a.btn {
+    header .overlay { z-index: 1; max-width: 800px; }
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; margin: 15px 0; }
+    .btn {
       display: inline-block;
       margin-top: 20px;
       padding: 12px 25px;
@@ -60,44 +57,109 @@
       border-radius: 6px;
       font-weight: bold;
     }
+    .btn:hover { background: #005f99; }
 
-    a.btn:hover {
-      background: #005f99;
+    section { padding: 80px 50px; text-align: center; }
+    section:nth-child(even) { background: #f4f4f4; }
+    section h2 { font-size: 2rem; margin-bottom: 20px; }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
     }
-
-    /* Normal content after header */
-    section {
-      padding: 50px;
+    .project-card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .skills-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      font-size: 1.1rem;
+    }
+    footer {
+      background: #003366;
+      color: white;
       text-align: center;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Hero Section -->
+  <!-- NAVIGATION -->
+  <nav>
+    <div><strong>PARISA NOURI</strong></div>
+    <div>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
   <header>
     <img src="images/shoulder-singularity.gif" alt="Robot GIF" class="bg-video">
-
     <div class="overlay">
       <h1>Parisa Nouri</h1>
-      <p>Exploring the intersection of robotics and artificial intelligence. 
-         Graduate researcher with experience in computer vision, deep learning, 
-         and real-time automation.</p>
+      <p>Applied Scientist in Robotics & AI | Exploring computer vision, deep learning, and real-time automation.</p>
       <a href="Resume – Robotics engineer-Paris-Nouri.pdf" class="btn" target="_blank">📄 Download Resume</a>
     </div>
   </header>
 
-  <!-- Other sections (white background) -->
-  <section>
+  <!-- PROJECTS -->
+  <section id="projects">
     <h2>Projects</h2>
-    <p>Here you’ll find some of my featured robotics and AI projects.</p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Object Tracking Library</h3>
+        <p>Python library for real-time object detection and tracking using YOLO models.</p>
+        <a href="https://github.com/parisa-nsh" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>EEG Motion Classifier</h3>
+        <p>CNN-based brain-signal classification project for robotics control systems.</p>
+        <a href="https://github.com/parisa-nsh" target="_blank">View on GitHub</a>
+      </div>
+    </div>
   </section>
 
-  <section>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi, I’m Parisa! I specialize in robotics, AI, and applied research. My passion is bridging AI research with real-world solutions, particularly in robotics, computer vision, and Industry 5.0 applications.</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <span>🤖 Robotics</span>
+      <span>📷 Computer Vision</span>
+      <span>🧠 Deep Learning</span>
+      <span>☁️ AWS SageMaker</span>
+      <span>📊 Data Science</span>
+      <span>⚙️ MLOps</span>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:paris.nouri@hotmail.com">paris.nouri@hotmail.com</a></p>
     <p><a href="https://www.linkedin.com/in/parisnouri" target="_blank">LinkedIn</a></p>
+    <p><a href="https://github.com/parisa-nsh" target="_blank">GitHub</a></p>
   </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Parisa Nouri | Robotics & AI Portfolio</p>
+  </footer>
 
 </body>
 </html>
