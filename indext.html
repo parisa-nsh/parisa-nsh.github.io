@@ -7,74 +7,100 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <header>
-    <nav class="navbar">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero / Intro -->
   <section id="home" class="hero">
-    <h1>Paris Nouri</h1>
-    <p>Exploring the intersection of Robotics & Artificial Intelligence</p>
-    <a href="resume.pdf" class="btn">Download Resume</a>
+    <div class="container">
+      <h1>Paris Nouri</h1>
+      <p>Graduate Researcher in Robotics & AI — Computer Vision · Deep Learning · Real-Time Automation</p>
+      <a href="resume.pdf" class="btn">Download Resume</a>
+    </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects">
-    <h2>Featured Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Object Tracking Library</h3>
-        <p>Python + OpenCV library for security cameras, with email alerts and real-time bounding boxes.</p>
-        <a href="https://github.com/parisnouri">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <h3>EEG Motion Classifier</h3>
-        <p>Deep learning CNN model to classify motor imagery brain states. Applied in BCI research.</p>
-        <a href="https://github.com/parisnouri">View on GitHub</a>
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="images/project1.jpg" alt="Project 1 screenshot">
+          <div class="project-info">
+            <h3>Object Tracking Library</h3>
+            <p>Python + OpenCV library for camera-based security with real-time bounding boxes and alerts.</p>
+            <a href="https://github.com/parisnouri">View on GitHub</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/project2.jpg" alt="Project 2 screenshot">
+          <div class="project-info">
+            <h3>EEG Motion Classifier</h3>
+            <p>Deep learning CNN model to classify motor imagery states for brain-computer interface research.</p>
+            <a href="https://github.com/parisnouri">View on GitHub</a>
+          </div>
+        </div>
+        <!-- Add more project cards similarly -->
       </div>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m Paris Nouri, a graduate researcher and applied scientist in Robotics & AI. 
-    My work spans computer vision, deep learning, and real-time automation — building smart systems that connect research to real-world applications.</p>
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Hello, I'm Paris Nouri. I’m a graduate researcher and applied scientist in Robotics & AI. My work spans computer vision, deep learning, and real-time automation — building intelligent systems that bridge research and real-world impact. I enjoy solving robotics engineering challenges, experimenting with new algorithms and hardware, and sharing what I learn.</p>
+        </div>
+        <div class="about-image">
+          <img src="images/yourphoto.jpg" alt="Paris Nouri">
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>Python</li>
-      <li>ROS</li>
-      <li>OpenCV</li>
-      <li>Deep Learning (PyTorch, TensorFlow)</li>
-      <li>Computer Vision</li>
-      <li>Simulation (RoboDK, Isaac Sim)</li>
-      <li>Automation Systems</li>
-    </ul>
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Python</li>
+        <li>ROS</li>
+        <li>OpenCV</li>
+        <li>Deep Learning (PyTorch, TensorFlow)</li>
+        <li>Simulation Tools</li>
+        <li>Real-Time Systems</li>
+        <li>Computer Vision</li>
+      </ul>
+    </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: paris.nouri@hotmail.com</p>
-    <p>GitHub: <a href="https://github.com/parisnouri">github.com/parisnouri</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/parisnouri">linkedin.com/in/parisnouri</a></p>
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:paris.nouri@hotmail.com">paris.nouri@hotmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/parisnouri">github.com/parisnouri</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/parisnouri">linkedin.com/in/parisnouri</a></p>
+    </div>
   </section>
 
-  <footer>
-    <p>© Paris Nouri 2025</p>
+  <footer class="footer">
+    <div class="container">
+      <p>© Paris Nouri 2025</p>
+    </div>
   </footer>
 
 </body>
