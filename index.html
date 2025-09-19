@@ -6,41 +6,48 @@
   <title>Parisa Nouri | Robotics & AI</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* Basic reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body, html { height: 100%; font-family: Arial, sans-serif; color: white; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
 
-    /* Background GIF */
-    .bg-video {
-      position: fixed;
+    /* Hero Section */
+    header {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* GIF background only for header */
+    header img.bg-video {
+      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
       z-index: -1;
+      filter: brightness(0.5); /* darken for readability */
     }
 
-    /* Overlay for text */
     .overlay {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.6); /* dark transparent overlay */
-      text-align: center;
+      z-index: 1;
+      max-width: 800px;
     }
 
     h1 {
       font-size: 3rem;
-      font-weight: bold;
+      margin-bottom: 10px;
     }
 
     p {
       font-size: 1.2rem;
       margin: 15px 0;
-      max-width: 700px;
     }
 
     a.btn {
@@ -57,25 +64,40 @@
     a.btn:hover {
       background: #005f99;
     }
+
+    /* Normal content after header */
+    section {
+      padding: 50px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Background GIF -->
-  <img src="images/shoulder-singularity.gif" alt="Robot Background" class="bg-video">
+  <!-- Hero Section -->
+  <header>
+    <img src="images/shoulder-singularity.gif" alt="Robot GIF" class="bg-video">
 
-  <!-- Content Overlay -->
-  <div class="overlay">
-    <h1>Parisa Nouri</h1>
-    <p>Exploring the intersection of robotics and artificial intelligence. 
-       Graduate researcher with experience in computer vision, deep learning, 
-       and real-time automation. Sharing projects, research, and experiments 
-       in building smart autonomous systems.</p>
+    <div class="overlay">
+      <h1>Parisa Nouri</h1>
+      <p>Exploring the intersection of robotics and artificial intelligence. 
+         Graduate researcher with experience in computer vision, deep learning, 
+         and real-time automation.</p>
+      <a href="Resume – Robotics engineer-Paris-Nouri.pdf" class="btn" target="_blank">📄 Download Resume</a>
+    </div>
+  </header>
 
-    <a href="Resume – Robotics engineer-Paris-Nouri.pdf" class="btn" target="_blank">📄 Download Resume</a>
-    <br>
-    <a href="https://github.com/parisa-nsh" class="btn" target="_blank">🌐 Visit My GitHub</a>
-  </div>
+  <!-- Other sections (white background) -->
+  <section>
+    <h2>Projects</h2>
+    <p>Here you’ll find some of my featured robotics and AI projects.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:paris.nouri@hotmail.com">paris.nouri@hotmail.com</a></p>
+    <p><a href="https://www.linkedin.com/in/parisnouri" target="_blank">LinkedIn</a></p>
+  </section>
 
 </body>
 </html>
